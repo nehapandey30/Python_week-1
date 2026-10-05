@@ -1,0 +1,5 @@
+a=(2,34,5,6,78,90,12,34,45,56)
+b=(9,)
+print("maximum number in the tuple is:",max(a))
+print("minimum number in the tuple is:",min(a))
+print(b)
