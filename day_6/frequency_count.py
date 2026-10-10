@@ -10,3 +10,4 @@ for i in dict:
             d[j]=1
 print(d)
 print(d.keys())
+print(d.values())
