@@ -6,3 +6,4 @@ marks={
 } 
 print(marks.keys())
 print(marks.values())
+print(marks.items())

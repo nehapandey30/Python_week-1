@@ -14,3 +14,4 @@ print(student)
 student["name"]="Jyoti"
 student["roll_no"]=10
 print(student)
+print(student.keys())

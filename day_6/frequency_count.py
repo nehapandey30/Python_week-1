@@ -9,3 +9,4 @@ for i in dict:
         else:
             d[j]=1
 print(d)
+priny(d.keys())
