@@ -1,14 +1,28 @@
+"""frequency_count.py
 
-fruits = "apple banana sev apple mirchi jackfruit"
+Count word frequencies from a string; handle punctuation and case.
+"""
 
-d = {}
+import re
 
-for j in fruits.split():
-    if j in d:
-        d[j] += 1
-    else:
-        d[j] = 1
 
-print(d)
-print(d.keys())
-print(d.values())
+def frequency_count(text: str) -> dict:
+    """Return a mapping of word -> count for the given text.
+
+    Words are extracted case-insensitively using a simple word regex.
+    """
+    words = re.findall(r"\b\w+\b", text.lower())
+    freq = {}
+    for w in words:
+        freq[w] = freq.get(w, 0) + 1
+    return freq
+
+
+if __name__ == "__main__":
+    fruits = "apple banana sev apple mirchi jackfruit"
+    d = frequency_count(fruits)
+
+    # Print the frequency mapping and readable lists of keys/values
+    print(d)
+    print(list(d.keys()))
+    print(list(d.values()))
